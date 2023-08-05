@@ -1,0 +1,177 @@
+*{
+    background-color: #0a003d;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: font;
+}
+
+@font-face {
+    font-family: font;
+    src: url(fonts/Oswald-Bold.ttf);
+}
+
+nav{
+    margin-left: 5%;
+    position: absolute;
+    background-color: #0a003d;
+    font-family: font;
+}
+
+.logo{
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+
+h1{
+    font-size: 30px;
+    color: antiquewhite;
+    margin-bottom: 1rem;
+    background-color: black;
+    height: auto;
+    text-align: center;
+}
+
+h2{
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: row;   
+}
+
+
+nav a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.menu{
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    min-width: 40rem;
+    max-width: 45%;
+    text-align: left;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    text-decoration: none;
+    color: #0a003d;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    box-shadow: 0 3rem 2rem black;
+}
+
+p{
+    margin: 10px;
+    color: #0a003d;
+    background-color: transparent;
+    font-size: 2.4rem;
+}
+
+.info{
+    font-size: 2.4rem;
+    color: #0a003d;
+    background-color: antiquewhite;
+    text-decoration: none;
+}
+
+.menu:hover{
+    cursor: default;
+    transition: transform 150ms;
+    color: aliceblue;
+    background-color: gray;;
+}
+
+.menu:hover p{
+    cursor: default;
+    transition: transform 150ms;
+    color: aliceblue;
+    background-color: gray;
+}
+
+.menu:hover .info{
+    cursor: pointer;
+    color: antiquewhite;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.menu{
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:1024px){
+    .flex-column{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        max-width: 80rem;
+        margin: 0;
+        margin-top: 5rem;
+        padding: 2rem;
+    }
+
+    .menu{
+        font-size: 2.4rem;
+        padding: 2rem 0;
+        width: 40rem;
+        text-align: center;
+        margin: 0;
+        text-decoration: none;
+        color: #0a003d;
+        background-color: antiquewhite;
+        border-radius: 25px;
+        box-shadow: 0 3rem 6rem black;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    nav{
+        margin-top: -5rem;
+        margin-left: 5%;
+        position: absolute;
+        background-color: #0a003d;
+        font-family: font;
+    }
+}

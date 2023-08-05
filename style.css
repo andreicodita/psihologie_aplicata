@@ -1,0 +1,280 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: font;
+}
+
+body{
+    background-color: #0a003d;
+    overflow-x: hidden;
+}
+
+.text1, h1{
+    font-size: 6rem;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+    margin-top: 3rem;
+}
+
+.text2 h1{
+    font-size: 6rem;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+    margin-bottom: 4rem;
+}
+
+.text1, .text2 p{
+    font-size: 2rem;
+}
+
+.text1, .text2 h1, p{
+    color: aliceblue;
+    font-family: font;
+}
+
+.text1, .text2 p{
+    color: aliceblue;
+}
+
+.text1{
+    float: right;
+    margin: 3rem;
+    animation: slider2 5s;
+}
+
+.text2{
+    position: absolute;
+    bottom: 0;
+    margin: 3rem;
+    animation: slider 5s;
+}
+
+.img10 {
+    width: 45rem;
+    height: 25.4rem;
+    box-shadow: 1rem 1rem 5rem black;
+  }
+
+.img20{
+    width: 45rem;
+    height: 25.4rem;
+    box-shadow: -1rem -1rem 5rem black;
+}
+
+.img{
+    position: absolute;
+    z-index: -1;
+    animation: slider 5s;
+}
+
+.img2{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    animation: slider2 5s;
+}
+
+
+@keyframes slider2{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slider{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@font-face {
+    font-family: font;
+    src: url(fonts/Oswald-Bold.ttf);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #0a003d;
+    font-family: font;
+}
+
+a.desktop{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a.phone{
+    display: none;
+    
+}
+
+.logo{
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+.nav_links{
+    display: flex;
+    background-color: #0a003d;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav_links li{
+    list-style: none;
+}
+
+.nav_links a{
+    color: aliceblue;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1px;
+}
+
+.nav_links a:hover{
+    color: aqua;
+}
+.mobile{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+    .nav_links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .text1{
+        margin-top: 20rem;
+        z-index: -1;
+    }
+
+    .text1 h1{
+        font-size: 2.5rem;
+        margin-right: 3rem;
+        margin-top: 0;
+    }
+
+    .img10{
+        margin-top: 3.5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .img20{
+            margin-bottom: 12rem;
+            width: 100%;
+            height: auto;
+    }
+
+    .news{
+        position: relative;
+        z-index: -1;
+    }
+
+    .text2 p{
+        top: 1rem; 
+        z-index: -1;
+        font-size: 1rem;
+        margin-top: 50rem;
+        margin-left: -2rem;
+    }
+
+
+    .nav_links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #0a003d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 10;
+    }
+
+    a.desktop{
+        display: none;
+    }
+    
+    a.phone{
+        color: aliceblue;
+        text-decoration: none;
+        display: flex;
+    }
+
+    .nav_links li{
+        opacity: 0;
+    }
+
+    .nav_links a{
+        color: white;
+    }
+    .mobile{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
